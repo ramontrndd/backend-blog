@@ -3,6 +3,8 @@ package com.bloghub.bloghub.entities;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serial;
 import java.io.Serializable;
 
@@ -10,6 +12,7 @@ import java.io.Serializable;
 @Table (name = "appuser")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserInfo implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
@@ -22,18 +25,6 @@ public class UserInfo implements Serializable {
     private String password;
     private String isDeletable;
     private String status;
-
-    public UserInfo() {
-
-    }
-
-    public UserInfo(Long id, String name, String email, String status) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.status = status;
-    }
-
 
 
     public Long getId() {

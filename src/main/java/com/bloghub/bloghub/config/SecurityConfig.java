@@ -45,7 +45,8 @@ public class SecurityConfig {
         http.cors(cors -> cors.configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues()))
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/appuser/addNewAppUser", "/appuser/login", "/article/getAllPublishedArticles").permitAll()
+                        .requestMatchers("/appUser/addNewUser", "/appUser/login", "/article/getAllPublishedArticles",
+                                "/appUser/addNewUser", "/appUser/login").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(withDefaults())

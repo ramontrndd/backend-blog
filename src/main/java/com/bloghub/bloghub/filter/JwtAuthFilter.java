@@ -23,7 +23,8 @@ import java.util.List;
 @Component
 public class JwtAuthFilter extends OncePerRequestFilter {
 
-    private final List<String> allowEndPoints = Arrays.asList("/appuser/addNewAppUser", "/appuser/login", "/article/getAllPublishedArticles");
+    private final List<String> allowEndPoints = Arrays.asList("/AppUser/addNewUser", "/appUser/login", "/article/getAllPublishedArticles",
+            "/appUser/addNewUser", "/appUser/login");
 
     @Autowired
     JwtService jwtService;
